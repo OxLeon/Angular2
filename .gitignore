@@ -1,1 +1,11 @@
 # exclude everything except directory foo/bar
+# ignore all
+*
+# Except folders
+!1ra/
+!1ra/components/
+
+# except files
+!.gitignore
+!package.json
+!examples.txt

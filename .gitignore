@@ -9,3 +9,5 @@
 !.gitignore
 !package.json
 !examples.txt
+!.js
+!.json

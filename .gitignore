@@ -4,6 +4,7 @@
 # Except folders
 !1ra/
 !1ra/components/
+!my-app/
 !my-app/src/
 !my-app/src/app/
 !my-app/src/app/common/

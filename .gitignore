@@ -4,6 +4,12 @@
 # Except folders
 !1ra/
 !1ra/components/
+!my-app/src/
+!my-app/src/app/
+!my-app/src/app/common/
+!my-app/src/app/commponents/
+!my-app/src/assets/
+!my-app/src/environments/
 
 # except files
 !.gitignore
@@ -11,3 +17,6 @@
 !examples.txt
 !*.js
 !*.json
+!*.ts
+!*.html
+!*.css

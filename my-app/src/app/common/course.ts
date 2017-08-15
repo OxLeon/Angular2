@@ -1,8 +1,11 @@
-
-//definicion para usarlo en otros componentes
-export interface Course{ // lo exportamos para que este disponible en mi proiyecto (definir estructura)
+// definicion para usarlo en otros componentes
+export interface Course { // lo exportamos para que este disponible en mi proiyecto (definir estructura)
+    // tslint:disable-next-line:semicolon
     id: number,
-    name : string,
-    image : string,
-    price : number
+    // tslint:disable-next-line:semicolon
+    name: string,
+    // tslint:disable-next-line:semicolon
+    image: string,
+    // tslint:disable-next-line:semicolon
+    price: number
 }

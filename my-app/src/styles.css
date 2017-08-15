@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin:0px;
+  }
+  
+  body{
+    font-family: 'Roboto', sans-serif;
+    font-size:13px;
+    color:#333333;
+  }
+  
+  header{
+    background:#1c3643;
+    font-size:30px;
+    padding:20px;
+    color:white;
+    
+  }
+  
+  h1{
+    background:#eee;
+    font-size:30px;
+    padding:10px;
+    text-transform: uppercase;
+    margin-bottom:3px;
+  }
+  
+  h2{
+    color:#666;
+    font-size: 22px;
+  }
+  
+  .courses_list{
+    width:75%;
+    float:left;
+  }
+  .cart{
+    float:left;
+    width:20%;
+    margin-left:1%;
+    border:1px solid #ddd;
+    padding:10px;
+  }
+  .courses_list:after{
+    clear:both;
+    display:block;
+    content:" ";
+  }
+  .courses_list .course{
+    float:left;
+    text-align:center;
+    width:20%;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:5px;
+    margin:5px;
+  }
+  .courses_list .course span{
+    font-size:18px;
+  }
+  
+  .courses_list .course button{
+    width:100%;
+    background:#7fc719;
+    color:white;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align:center;
+    margin-top:10px;
+    border:0px ;
+    border-radius:5px;
+  }
+  
+  .cart .detail{
+    font-size: 15px;
+  }
+  .cart .detail .total{
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .total{
+    text-align:right;
+    font-size:20px;
+    font-weight: bold;
+    display:block;
+  }
+  
+  nav{
+    background:black;
+    padding:4px;
+  }
+  nav a{
+    color:white;
+    font-size: 18px;
+    margin-right: 30px;
+    text-transform: uppercase;
+  }
+  
+  .detail-course{
+    padding:30px;
+    background:#f3f3f3;
+    text-align: center;
+    font-size: 20px;
+    height:600px;
+  }
+  
+  .detail-course H2{
+    font-size: 40px;
+    color:#000;
+  }
+  
+  .detail-course p{
+    margin-top: 30px;
+  }

@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser'; // codigo sea ejecuta
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component'; // Ruta de mi componente
-
 import { CoursesComponent } from './courses.component';
+import { CourseBoxcomponent } from './components/coursebox.component';
 
 @NgModule({
-  declarations: [ // Componentes que estoy utilizando
+  declarations: [ // Componentes que estoy utilizando, si no estan definidos aqui no los puedo utilizar 
     AppComponent,
-    CoursesComponent
+    CoursesComponent,
+    CourseBoxcomponent
   ],
   imports: [
     BrowserModule
@@ -19,4 +20,4 @@ import { CoursesComponent } from './courses.component';
 export class AppModule { }
 
 
-// Importar lbrerias para que funione el projecto en angular 
+// Importar lbrerias para que funione el projecto en angular

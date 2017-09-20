@@ -11,6 +11,8 @@
 !my-app/src/app/commponents/
 !my-app/src/assets/
 !my-app/src/environments/
+!my-app/src/app/data/
+!my-app/src/app/services/
 
 # except files
 !.gitignore

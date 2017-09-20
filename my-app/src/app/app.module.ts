@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component'; // Ruta de mi componente
 import { CoursesComponent } from './courses.component';
-import { CourseBoxcomponent } from './components/coursebox.component';
+import { CourseBoxComponent } from './components/coursebox.component';
+import {CartComponent} from './components/cart.component';
 
 @NgModule({
   declarations: [ // Componentes que estoy utilizando, si no estan definidos aqui no los puedo utilizar 
     AppComponent,
     CoursesComponent,
-    CourseBoxcomponent
+    CourseBoxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule

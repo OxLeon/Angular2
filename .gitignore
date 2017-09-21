@@ -13,6 +13,8 @@
 !my-app/src/environments/
 !my-app/src/app/data/
 !my-app/src/app/services/
+!my-app/src/app/data/
+!my-app/src/assets/
 
 # except files
 !.gitignore
@@ -23,3 +25,4 @@
 !*.ts
 !*.html
 !*.css
+!*.png

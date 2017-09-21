@@ -13,7 +13,7 @@ import {CartService} from '../services/cart.service';
             <div *ngFor="let key of keys()" class="detail">
                 {{courses[key].name}}
                 {{courses[key].price | currency:'USD' : true :'1.2-2'}}
-                {{courses[key].quantity }}
+                 <span> x uni.</span> {{courses[key].quantity }}
                 <span class="total">
                     {{ (courses[key].quantity * courses[key].price) }}
                 </span>

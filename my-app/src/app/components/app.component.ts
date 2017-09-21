@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 // Para utilizar nuestro servcio cart, se necesita pasar el servicio como provider
-import {CartService} from './services/cart.service';
+import {CartService} from '../services/cart.service';
 
 @Component({
   selector: 'app-root',

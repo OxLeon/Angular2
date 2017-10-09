@@ -1,39 +1,23 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core'; //OnInit los datos cuando se ejecute la clase
 import {Course} from '../common/course';
-
-
-const COURSES: Course[] = [
-    {
-        id : 1,
-        name : 'Angular',
-        image : './assets/angular.png',
-        price : 50
-    },
-    {
-        id : 2,
-        name : 'Pynton',
-        image : './assets/python.png',
-        price : 10
-    },
-    {
-        id : 3,
-        name : 'Ruby',
-        image : 'ruta...',
-        price : 10
-    }
-];
+import {ApiService} from '../services/api.service';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
     // tslint:disable-next-line:component-selector
     selector : 'courses',
     template :
     `   <h2> {{title}}</h2>
-        <coursebox
-            [course]="course_info"
-            *ngFor = 'let course_info of courses'
-        >
-        </coursebox>
-    `
+        <div class="courses_list"> 
+            <coursebox
+                [course]="course_info"
+                *ngFor = 'let course_info of courses'
+            >
+            </coursebox>
+        </div>
+        <cart></cart>
+    `,
+    providers : [ApiService]
     // Para tener un atributo html en Angular es necesario ponerlo en []
     // Falta <img [src]="courses.image"> </img>
     // *ngFor="let course of courses " Realizar un ng repeat
@@ -49,9 +33,27 @@ const COURSES: Course[] = [
     */
 })
 
-export class CoursesComponent {
+export class CoursesComponent implements OnInit{
     // tslint:disable-next-line:no-inferrable-types
     title: string = 'Cursos disponibles';
     //  Definimos un dato del tipo Course
-    courses: Course [] = COURSES; // courses es igual a un array de Course que es mi interface
+    courses: Course []; //  Obtendre la información al cargar el modulo
+
+    constructor(private ApiService: ApiService){ //Iniciamos pun atributo par autilizar el api que generamos
+
+    }
+
+
+    getCourses(){
+        this.ApiService.getCourses().then(
+            courses => this.courses = courses // Mi param courses = this.courses de mi component
+        )
+    }
+
+    // funcion que se ejecuta al iniciar el component
+    ngOnInit() {
+        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+        //Add 'implements OnInit' to the class.
+        this.getCourses();
+    }
 }

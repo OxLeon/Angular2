@@ -1,23 +1,43 @@
-import { BrowserModule } from '@angular/platform-browser'; // codigo sea ejecutado en cualquier navegador
-import { NgModule } from '@angular/core';
-import {HttpModule} from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser'; // codigo sea ejecutado en cualquier navegador
+import {NgModule} from '@angular/core';
+import {HttpModule} from '@angular/http'; 
+import {RouterModule} from '@angular/router';
 
-
-import { AppComponent } from './components/app.component'; // Ruta de mi componente
-import { CoursesComponent } from './components/courses.component';
-import { CourseBoxComponent } from './components/coursebox.component';
+import {AppComponent} from './components/app.component'; // Ruta de mi componente
+import {CoursesComponent} from './components/courses.component';
+import {CourseBoxComponent} from './components/coursebox.component';
 import {CartComponent} from './components/cart.component';
+import {WelcomeComponent} from './components/welcome.component';
+import {CourseDetail} from './components/details.component';
+
+const routes = [
+  {
+     path: '', // la ruta principal respondera lo de welcome component
+     component: WelcomeComponent
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent
+  },
+  {
+    path  :'course/:id', //id dinamico
+    component: CourseDetail
+  }
+]; 
 
 @NgModule({
   declarations: [ // Componentes que estoy utilizando, si no estan definidos aqui no los puedo utilizar 
     AppComponent,
     CoursesComponent,
     CourseBoxComponent,
-    CartComponent
+    CartComponent,
+    WelcomeComponent,
+    CourseDetail
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

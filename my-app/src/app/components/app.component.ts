@@ -6,9 +6,12 @@ import {CartService} from '../services/cart.service';
   selector: 'app-root',
   template: `
         <header>  Ejemplo curso </header>
+        <nav>
+          <a routerLink=""> Inicio </a>
+          <a routerLink="courses"> Cursos </a>
+        </nav>
           <section>
-            <courses></courses>
-            <cart> </cart>
+            <router-outlet> </router-outlet> <!--Renderear dependiendo el path -->
           </section>`,
   providers : [CartService] // Agregar los servicios que utilizaremos
 })

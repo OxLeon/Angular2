@@ -7,5 +7,6 @@ export interface Course { // lo exportamos para que este disponible en mi proiye
     // tslint:disable-next-line:semicolon
     image: string,
     // tslint:disable-next-line:semicolon
-    price: number
+    price: number,
+    state ?: string // ? opcional
 }

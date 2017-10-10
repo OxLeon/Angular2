@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'; //OnInit los datos cuando se ejecute la clase
 import {Course} from '../common/course';
 import {ApiService} from '../services/api.service';
+import {AuthService} from '../services/auth.service'
 import 'rxjs/add/operator/toPromise';
 
 @Component({
@@ -17,7 +18,7 @@ import 'rxjs/add/operator/toPromise';
         </div>
         <cart></cart>
     `,
-    providers : [ApiService]
+    providers : [ApiService,AuthService]
     // Para tener un atributo html en Angular es necesario ponerlo en []
     // Falta <img [src]="courses.image"> </img>
     // *ngFor="let course of courses " Realizar un ng repeat
@@ -39,7 +40,11 @@ export class CoursesComponent implements OnInit{
     //  Definimos un dato del tipo Course
     courses: Course []; //  Obtendre la información al cargar el modulo
 
-    constructor(private ApiService: ApiService){ //Iniciamos pun atributo par autilizar el api que generamos
+    constructor(
+        //Iniciamos pun atributo par autilizar el api que generamos
+        private ApiService: ApiService,
+        private auth: AuthService
+    ){ 
 
     }
 
@@ -55,5 +60,6 @@ export class CoursesComponent implements OnInit{
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
         this.getCourses();
+        this.auth.check();
     }
 }
